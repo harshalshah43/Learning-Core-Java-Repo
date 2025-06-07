@@ -1,0 +1,10 @@
+https://downloads.mysql.com/archives/c-j/
+
+Download mysql connector jar file
+Download MySQL installer msi file and install it
+
+Open MySQL Workbench
+Start MYSQL 80 service from services.msc
+
+Create connection enter username and password, created during installation
+Create db, table
