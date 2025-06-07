@@ -1,0 +1,4 @@
+1. We do not create objects of an Abtract class
+2. Functions of abstract class may or may not be "defined"
+3. Classes that inherit from an abstract class:-
+    - Need to override all abstract methods of the Abstract Class
