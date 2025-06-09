@@ -33,3 +33,9 @@ class interface1
         a.show();
     }
 }
+
+
+// Assignment
+// Create an interface with three methods
+// Implement it in two classes I->A, I->B 
+// Call all the six methods from the Main class
