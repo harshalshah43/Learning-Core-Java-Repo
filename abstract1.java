@@ -7,13 +7,21 @@ abstract class Employee
 
     float age, salary;
 
-    abstract void processEmployee();
-    abstract void displayDetails();
+    private String creditcard_number;
 
-    void incrementSalary(double percent)
+    abstract void processEmployee(); //fn declaration
+    abstract void displayDetails(); //fn declaration
+
+    void incrementSalary(double percent) // fn definition
     {
         salary += percent * salary;
     }
+
+    String get_card_details()
+    {   
+        return creditcard_number;
+    }
+    
 }
 
 class Typist extends Employee
@@ -33,6 +41,7 @@ class Typist extends Employee
     void displayDetails()
     {
         System.out.println("Name :" + firstname + lastname + "Age :" + age + "Salary :" + salary);
+        System.out.println("Credit Card Details: " + get_card_details());
     }
 }
 
