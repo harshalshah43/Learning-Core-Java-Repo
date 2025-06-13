@@ -23,20 +23,26 @@ class Laptop extends Product
     //Method Overriding
     public void get_ProductDetails()
     {
+        System.out.println("Enter the product name");
         product_name =  sc.nextLine();
-        System.out.println("Enter the product name")
+        
+        System.out.println("Enter the product id");
         product_id = sc.nextLine();
-        System.out.println("Enter the product id")
+        
+        System.out.println("Enter the product description");
         product_description = sc.nextLine();
-        System.out.println("Enter the product description")
+        
+        System.out.println("Enter the product price");
         product_price = sc.nextFloat();
-        System.out.println("Enter the product price")
+        
+        System.out.println("Enter the diskspace");
         diskspace = sc.nextLine();
-        System.out.println("Enter the diskspace")
+        
+        System.out.println("Enter the memory");
         memory = sc.nextLine();
-        System.out.println("Enter the memory")
+        
+        System.out.println("Enter the cpus");
         cpus = sc.nextInt();
-        System.out.println("Enter the cpus")
     }
 
     public void set_ProductDetails()
@@ -56,4 +62,59 @@ class MixerGrinder extends Product
 {
 
     // Complete this
+    String material;
+    String numberOfJars;
+    int voltage; // number of cpus
+
+    Scanner sc = new Scanner(System.in);
+
+    //Method Overriding
+    public void get_ProductDetails()
+    {
+        
+        System.out.println("Enter the product name");
+        product_name =  sc.nextLine();
+        
+        System.out.println("Enter the product id");
+        product_id = sc.nextLine();
+        
+        System.out.println("Enter the product description");
+        product_description = sc.nextLine();
+        
+        System.out.println("Enter the product price");
+        product_price = sc.nextFloat();
+        
+        System.out.println("Enter the material");
+        material = sc.nextLine();
+        
+        System.out.println("Enter the number of Jars provided");
+        numberOfJars = sc.nextLine();
+        
+        System.out.println("Enter the input voltage");
+        voltage = sc.nextInt();
+    }
+
+    public void set_ProductDetails()
+    {
+        System.out.println("product name: ");
+        System.out.println("product id: ");
+        System.out.println("product price: ");
+        System.out.println("product description: ");
+        System.out.println("product material: ");
+        System.out.println("number of jars provided: ");
+        System.out.println("voltage: ");
+    }
+
+}
+
+class abstract2 {
+    public static void main(String args[]){
+        Laptop t = new Laptop();
+        t.get_ProductDetails();
+        t.set_ProductDetails();
+
+        MixerGrinder t1 = new MixerGrinder();
+        t1.get_ProductDetails();
+        t1.set_ProductDetails();
+    }
 }
