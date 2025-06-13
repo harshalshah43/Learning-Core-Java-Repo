@@ -3,19 +3,12 @@ interface Vehicle {
     public void stop();
 }
 
-/** 
-In Java, interfaces use extends to inherit from other interfaces — not implements
-The keyword implements is used only by classes when they agree to fulfill the contract defined by an interface.
-But when one interface is building upon another interface, it’s not providing implementation — it's just extending the contract. 
-So Java uses extends, just like it does for class inheritance.
- * **/
-
-interface Car extends Vehicle {
-    public void turn_left();
-    public void turn_right();
+abstract class Car implements Vehicle {
+    abstract public void turn_left();
+    abstract public void turn_right();  
 }
 
-class Sedan implements Car
+class Sedan extends Car
 {
     @Override    
     public void start() {
@@ -42,7 +35,7 @@ class Sedan implements Car
     }
 }
 
-public class interface_inheritance
+public class interface_inheritance2
 {
     public static void main(String[] args)
     {
