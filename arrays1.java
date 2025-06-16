@@ -38,3 +38,7 @@ class arrays1
         
     }
 }
+
+//Assignment
+
+// Repeat the int logic for float, double, bool values
