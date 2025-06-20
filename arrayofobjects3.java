@@ -39,7 +39,7 @@ class AgeCalculator
 
         return s;
     }
-    public void calculateAge(Student s[])
+    public double calculateAge(Student s[])
     {   
         // Calulate Average Age of Students in a classroom
         
@@ -50,7 +50,7 @@ class AgeCalculator
         }
         double average = sum/s.length;
         
-        System.out.println("Average age of the classroom is :" + average);
+        return average;
     }
 }
 
@@ -69,8 +69,9 @@ class arrayofobjects3
 
         AgeCalculator a = new AgeCalculator(); //Single object
         s = a.getStudentDetails(s);
-        a.calculateAge(s);
 
+        double average = a.calculateAge(s);
+        System.out.println("Average age of the classroom is :" + average);
         
     }
 }
