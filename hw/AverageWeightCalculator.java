@@ -1,40 +1,60 @@
 import java.util.*;
 
 class Student{
-    double weight;
-    public Student (double weight){
-        this.weight = weight;
+    private String name;
+    private double age;
+
+    public Student(String name, double age){
+        this.name = name;
+        this.age = age;
+    }
+
+    // public void get_student(){
+    //     Scanner sc = new Scaneer(System.in);
+    //     SYstem.out.println("Enter name and age of student: ");
+    //     name = sc.nextLine();
+    //     age = sc.nextDouble();
+    // }
+    public double get_age(){
+        return age;
+    }
+
+
+    public void show_student(){
+        System.out.println("name: "+name+"; Age: "+age);
     }
 }
 
-class AverageCalculator{
-    public double getAverage(Student[] students){
-        double sum = 0;
-        for(int i =0; i<students.length; i++){
-            sum+= students[i].weight;
-        }
-        return sum/students.length;
-    }
-}
-
-public class AverageWeightCalculator{
+class AverageWeightCalculator{
     public static void main(String[] args){
+        int n = 5;
+        Student s[] = new Student[n]; // created an obj with array
+
+        // s[0] = new Student("Raj", 23);
+        // s[1] = new Student("Ravi", 22);
+        // s[2] = new Student("Tej", 26);
+        // s[3] = new Student("Rajeev", 25);
+        // s[4] = new Student("Sanjay", 24);
+
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter number of students: ");
-        int n = sc.nextInt();
-        Student[] students= new Student[n];
-
+        String name;
+        double age;
+        
         for (int i=0; i<n; i++){
-            System.out.println("Enter the weight of the student: "+(i+1)+": ");
-            double w = sc.nextDouble();
-            students[i] = new Student(w);
+            
+            System.out.println("Enter the student name and age: ");
+            name = sc.nextLine();
+            age = sc.nextDouble();
+            sc.nextLine();
+
+            s[i] = new Student(name, age);
         }
+    double sum = 0;
+        for (int i=0; i<s.length; i++){
+            sum += s[i].get_age();
+        }
+        double average = sum/s.length;
 
-        AverageCalculator calc = new AverageCalculator();
-        double avg = calc.getAverage(students);
-
-        System.out.println("Average weight of students: "+avg);
-        sc.close();
+        System.out.println("Average age of the classroom is : "+average);
     }
 }
