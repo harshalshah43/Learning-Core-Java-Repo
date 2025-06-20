@@ -47,7 +47,7 @@ class Laptop extends Product
 
     public void set_ProductDetails()
     {
-        System.out.println("product name");
+        System.out.println("product name"+);
         System.out.println("product id");
         System.out.println("product price");
         System.out.println("product description");
@@ -96,7 +96,7 @@ class MixerGrinder extends Product
 
     public void set_ProductDetails()
     {
-        System.out.println("product name: ");
+        System.out.println("product name: "+product_name);
         System.out.println("product id: ");
         System.out.println("product price: ");
         System.out.println("product description: ");
