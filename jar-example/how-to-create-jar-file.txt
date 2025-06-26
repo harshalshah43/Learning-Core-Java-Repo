@@ -1,0 +1,13 @@
+complile java program
+create manifest.txt > open and mention the name of the java file containing the main class
+example: Main-Class: array_abstract.java (make sure the cursor is in the newline before saving)
+Run jar file: java -jar array_abstract.jar
+-----------------------------------------------
+Important tips
+jar cfm array_abstract.jar manifest.txt *.class
+c - create
+f - filename
+m - manifest filename
+
+syntax:
+jar cfm <jar-filename> <manifest-filename> <list of class files>
