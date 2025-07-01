@@ -41,9 +41,17 @@ class arrayofobjects
             
             System.out.println("--------------");
 
-            for (int i=0;i<n;i++)
+            // for (int i=0;i<n;i++)
+            // {
+            //   e[i].show_employee();
+            // }
+
+
+            System.out.println("--------------");
+
+            for(Employee emp:e)
             {
-              e[i].show_employee();
+                emp.show_employee();
             }
 
         }
