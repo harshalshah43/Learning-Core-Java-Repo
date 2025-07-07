@@ -1,5 +1,5 @@
 import java.io.*;
-class Divide{
+class test2{
 public static void main(String args[]) throws IOException{
    int a=0,b=0,res;
    BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
