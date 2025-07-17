@@ -1,6 +1,6 @@
-create database bank;
+create database bank2;
 
-use bank;
+use bank2;
 
 CREATE TABLE customers (
     id INT PRIMARY KEY,
@@ -54,3 +54,12 @@ INSERT INTO customers (id, name, balance)
 VALUES (5, 'Emma Wilson', 1800.40);
 
 select * from customers;
+
+update customers set balance = balance + 1000 where id = 1;
+
+select * from employee;
+
+select * from transactions;
+
+select
+
