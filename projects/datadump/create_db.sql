@@ -1,6 +1,6 @@
 create database bank2;
 
-use bank2;
+use bank;
 
 CREATE TABLE customers (
     id INT PRIMARY KEY,
@@ -59,7 +59,9 @@ update customers set balance = balance + 1000 where id = 1;
 
 select * from employee;
 
-select * from transactions;
+select * from transactions where customer_id = 1 order by date desc limit 5;
 
-select
+select balance from customers where id = 1;
+
+sle
 
