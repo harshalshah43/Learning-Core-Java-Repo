@@ -8,7 +8,7 @@ public class BankManager {
     public void viewCustomerDetails(int customerId) {
         try {
             DBUtil db = new DBUtil();
-            Connection conn = db.getconnection();
+            Connection conn = db.connect();
             PreparedStatement ps = conn.prepareStatement("SELECT * FROM customers WHERE id = ?");
             ps.setInt(1, customerId);
             ResultSet rs = ps.executeQuery();
@@ -26,7 +26,7 @@ public class BankManager {
     public void viewTransactionHistory(int customerId) {
         try {
             DBUtil db = new DBUtil();
-            Connection conn = db.getconnection();
+            Connection conn = db.connect();
             PreparedStatement ps = conn.prepareStatement("SELECT * FROM transactions WHERE customer_id = ? ORDER BY date DESC");
             ps.setInt(1, customerId);
             ResultSet rs = ps.executeQuery();

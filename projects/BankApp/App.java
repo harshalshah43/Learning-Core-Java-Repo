@@ -47,7 +47,7 @@ public class App {
                         cust.displayBalance(id);
                         break;
                     case 4:
-                        cust.last5Transactions(id);
+                        cust.last5transactions(id);
                         break;
                     case 5:
                         sc.close();
